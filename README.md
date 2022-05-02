@@ -2,6 +2,7 @@
 My ST Build featuring W3M Support and catpuccin theming. Built using Void Linux
 
 # Make Dependencies:
+- base-devel
 - fontconfig-devel 
 - libX11-devel 
 - libXft-devel
