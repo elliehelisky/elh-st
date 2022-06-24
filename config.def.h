@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static char *font = "Liberation Mono:pixelsize=15:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -169,37 +169,41 @@ static Shortcut shortcuts[] = {
     {TERMMOD, XK_Num_Lock, numlock, {.i = 0}},
 };
 
-/*
- *
- * Name : Catppuccin
- * author : tsjazil (https://github.com/tsjazil)
- *
- * Soothing pastel theme for the high-spirited!
- *
- */
-
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-    /* 8 normal colors */
-    "#6E6C7E", "#F28FAD", "#ABE9B3", "#FAE3B0", "#96CDFB", "#F5C2E7", "#89DCEB",
-    "#D9E0EE",
 
-    /* 8 bright colors */
-    "#988BA2", "#F28FAD", "#ABE9B3", "#FAE3B0", "#96CDFB", "#F5C2E7", "#89DCEB",
-    "#D9E0EE",
+  /* 8 normal colors */
+  [0] = "#0c0e14", /* black   */
+  [1] = "#0944c6", /* red     */
+  [2] = "#2c4aad", /* green   */
+  [3] = "#e22c2c", /* yellow  */
+  [4] = "#5f667d", /* blue    */
+  [5] = "#8289a4", /* magenta */
+  [6] = "#aeb3c4", /* cyan    */
+  [7] = "#e1e2e9", /* white   */
 
-    [256] = "#D9E0EE", /* default foreground colour */
-    [257] = "#1E1E2E", /* default background colour */
-    [258] = "#C3BAC6", /*575268*/
+  /* 8 bright colors */
+  [8]  = "#d72ac4", /* black   */
+  [9]  = "#5f84d7", /* red     */
+  [10] = "#53ba71", /* green   */
+  [11] = "#40aaad", /* yellow  */
+  [12] = "#f131db", /* blue    */
+  [13] = "#a06eec", /* magenta */
+  [14] = "#6193fb", /* cyan    */
+  [15] = "#b3a44f", /* white   */
 
+  /* special colors */
+  [256] = "#0c0e14", /* background */
+  [257] = "#c9ccd7", /* foreground */
 };
 
 /*
- * foreground, background, cursor, reverse cursor
+ * Default colors (colorname index)
+ * foreground, background, cursor
  */
-unsigned int defaultfg = 256;
-unsigned int defaultbg = 257;
-unsigned int defaultcs = 258;
+unsigned int defaultfg = 257;
+unsigned int defaultbg = 256;
+unsigned int defaultcs = 257;
 static unsigned int defaultrcs = 258;
 
 /*
