@@ -1,5 +1,5 @@
 # elh-st
-My ST Build featuring W3M Support and catpuccin theming. Built using Void Linux
+My ST Build featuring W3M Support and custom theming. Drop in replacement for URxvt and/or alacritty
 
 # Make Dependencies:
 - base-devel
