@@ -142,8 +142,8 @@ static uint forcemousemod = ShiftMask;
  */
 static MouseShortcut mshortcuts[] = {
     /* mask                 button   function        argument       release */
-{ XK_ANY_MOD,           Button4, kscrollup,      {.i = 1},		0, /* !alt */ -1 },
-	{ XK_ANY_MOD,           Button5, kscrolldown,    {.i = 1},		0, /* !alt */ -1 },
+    {XK_ANY_MOD, Button4, kscrollup, {.i = 1}, 0, /* !alt */ -1},
+    {XK_ANY_MOD, Button5, kscrolldown, {.i = 1}, 0, /* !alt */ -1},
     {XK_ANY_MOD, Button2, selpaste, {.i = 0}, 1},
     {ShiftMask, Button4, ttysend, {.s = "\033[5;2~"}},
     {XK_ANY_MOD, Button4, ttysend, {.s = "\031"}},
@@ -169,36 +169,36 @@ static Shortcut shortcuts[] = {
     {TERMMOD, XK_Y, selpaste, {.i = 0}},
     {ShiftMask, XK_Insert, selpaste, {.i = 0}},
     {TERMMOD, XK_Num_Lock, numlock, {.i = 0}},
-    { ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
-	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
+    {ShiftMask, XK_Page_Up, kscrollup, {.i = -1}},
+    {ShiftMask, XK_Page_Down, kscrolldown, {.i = -1}},
 };
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 
-  /* 8 normal colors */
-  [0] = "#0c0e14", /* black   */
-  [1] = "#0944c6", /* red     */
-  [2] = "#2c4aad", /* green   */
-  [3] = "#e22c2c", /* yellow  */
-  [4] = "#5f667d", /* blue    */
-  [5] = "#8289a4", /* magenta */
-  [6] = "#aeb3c4", /* cyan    */
-  [7] = "#e1e2e9", /* white   */
+    /* 8 normal colors */
+    [0] = "#666666", /* black   */
+    [1] = "#cc6666", /* red     */
+    [2] = "#66cc99", /* green   */
+    [3] = "#cc9966", /* yellow  */
+    [4] = "#6699cc", /* blue    */
+    [5] = "#cc6699", /* magenta */
+    [6] = "#66cccc", /* cyan    */
+    [7] = "#cccccc", /* white   */
 
-  /* 8 bright colors */
-  [8]  = "#d72ac4", /* black   */
-  [9]  = "#5f84d7", /* red     */
-  [10] = "#53ba71", /* green   */
-  [11] = "#40aaad", /* yellow  */
-  [12] = "#f131db", /* blue    */
-  [13] = "#a06eec", /* magenta */
-  [14] = "#6193fb", /* cyan    */
-  [15] = "#b3a44f", /* white   */
+    /* 8 bright colors */
+    [8] = "#999999",  /* black   */
+    [9] = "#ff9999",  /* red     */
+    [10] = "#99ffcc", /* green   */
+    [11] = "#ffcc99", /* yellow  */
+    [12] = "#99ccff", /* blue    */
+    [13] = "#ff99cc", /* magenta */
+    [14] = "#99ffff", /* cyan    */
+    [15] = "#ffffff", /* white   */
 
-  /* special colors */
-  [256] = "#0c0e14", /* background */
-  [257] = "#c9ccd7", /* foreground */
+    /* special colors */
+    [256] = "#000000", /* background */
+    [257] = "#ffffff", /* foreground */
 };
 
 /*
@@ -209,6 +209,9 @@ unsigned int defaultfg = 257;
 unsigned int defaultbg = 256;
 unsigned int defaultcs = 257;
 static unsigned int defaultrcs = 258;
+
+static unsigned int defaultitalic = 7;
+static unsigned int defaultunderline = 7;
 
 /*
  * Special keys (change & recompile st.info accordingly)
